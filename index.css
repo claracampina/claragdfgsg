@@ -1,0 +1,81 @@
+@charset "UTF-8" ;
+/* Estilo geral do body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fce4ec; /* fundo rosa claro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Garante que a página ocupe toda a altura da tela */
+}
+
+/* Barra de navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff; /* Texto branco */
+    padding: 12px 20px;
+    margin: 0 15px;
+    font-size: 18px;
+    border-radius: 30px;
+    background-color: #d81b60; /* Cor de fundo rosa escuro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    background-color: #c2185b; /* Cor de fundo mais escura */
+    transform: translateY(-3px); /* Efeito de elevação */
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header img {
+    max-width: 80%; /* As imagens do cabeçalho ficam menores */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Main content: Imagens lado a lado */
+main {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens */
+    gap: 10px; /* Espaço entre as imagens */
+    padding: 0 20px;
+    max-width: 1000px;
+    width: 100%;
+    flex-wrap: wrap; /* Permite que as imagens se ajustem quando necessário */
+}
+
+/* Ajuste para as imagens dentro de main */
+main img {
+    width: 150px; /* Define o tamanho fixo das imagens */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade: Ajuste para telas pequenas */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Para telas pequenas, as imagens se empilham */
+        align-items: center;
+    }
+
+    main img {
+        width: 120px; /* Reduz o tamanho das imagens em telas pequenas */
+    }
+}
